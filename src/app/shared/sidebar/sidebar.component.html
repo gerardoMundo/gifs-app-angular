@@ -2,9 +2,8 @@
   >Gifs App</a
 >
 <hr class="border border-light border-1 opacity-50" />
-<div class="bg-light p-2 my-4 w-100 rounded">
-  <a class="text-center text-dark text-decoration-none" href="">Link de gif</a>
-</div>
-<div class="bg-light p-2 my-4 w-100 rounded">
-  <a class="text-center text-dark text-decoration-none" href="">Link de gif</a>
+<div *ngFor="let item of gifsList" class="bg-light p-2 my-4 w-100 rounded">
+  <a class="text-center text-dark text-decoration-none" href="">{{
+    item | titlecase
+  }}</a>
 </div>

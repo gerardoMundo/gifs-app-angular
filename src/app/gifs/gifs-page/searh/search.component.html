@@ -4,6 +4,8 @@
     class="form-control"
     id="floatingInput"
     placeholder="Tu ejemplo de gif"
+    (keyup.enter)="addQuery()"
+    #txtSearch
   />
   <label for="floatingInput">Busca un Gif...</label>
 </div>
