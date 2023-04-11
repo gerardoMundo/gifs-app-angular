@@ -2,8 +2,18 @@
   >Gifs App</a
 >
 <hr class="border border-light border-1 opacity-50" />
-<div *ngFor="let item of gifsList" class="bg-light p-2 my-4 w-100 rounded">
-  <a class="text-center text-dark text-decoration-none" href="">{{
-    item | titlecase
-  }}</a>
+<P class="text-light" *ngIf="gifsList.length === 0; else elseBlock"
+  >Aún no has realizado búsquedas</P
+>
+<ng-template #elseBlock
+  ><p class="text-light">Busquedas recientes:</p></ng-template
+>
+
+<div *ngFor="let gifItem of gifsList" class="bg-light p-2 my-4 w-100 rounded">
+  <a
+    class="list-group-item list-group-item-action"
+    (click)="reSearch(gifItem)"
+    href="#"
+    >{{ gifItem | titlecase }}</a
+  >
 </div>

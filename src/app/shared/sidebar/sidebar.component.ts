@@ -11,4 +11,9 @@ export class SidebarComponent {
   get gifsList() {
     return this.gifsService.gifsList;
   }
+
+  reSearch(gifItem: string) {
+    console.log(gifItem);
+    this.gifsService.searchGifs(gifItem);
+  }
 }
